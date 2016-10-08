@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<meta charset="UTF-8">
+	<title>班车在哪儿</title>
+	<script src='jquery.js'></script>
+	<script src='main.js'></script>
+	<script src='parsingData.js'></script>
+	<script src='utils.js'></script>
+	<script src="http://api.map.baidu.com/api?v=2.0&ak=ObzVA4woC7F2vmdwMrHCtoUA"></script>
+	<script src="http://api.map.baidu.com/library/TrafficControl/1.4/src/TrafficControl_min.js"></script>
+	<link href="http://api.map.baidu.com/library/TrafficControl/1.4/src/TrafficControl_min.css" rel="stylesheet">
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="weui.css">
+	<title>地图展示</title>
+</head>
+<body>
+	<div id="container"></div>
+	<div class="bd spacing">
+	    <a href="javascript:;" class="weui_btn weui_btn_primary" id="showActionSheet" onclick="onClick()">选择车辆</a>
+	</div>
+	<!--BEGIN actionSheet-->
+	<div id="actionSheet_wrap">
+	    <div class="weui_mask_transition" id="mask"></div>
+	    <div class="weui_actionsheet" id="weui_actionsheet">
+	        <div class="weui_actionsheet_menu">
+	        	<a href="javascript:;" onclick="check(0)"><div class="weui_actionsheet_cell">班车1</div></a>
+	            <a href="javascript:;" onclick="check(1)"><div class="weui_actionsheet_cell">班车2</div></a>
+	            <a href="javascript:;" onclick="check(2)"><div class="weui_actionsheet_cell">班车3</div></a>
+	            <a href="javascript:;" onclick="check(3)"><div class="weui_actionsheet_cell">班车4</div></a>
+	            <a href="javascript:;" onclick="check(4)"><div class="weui_actionsheet_cell">班车5</div></a>
+	            <a href="javascript:;" onclick="check(5)"><div class="weui_actionsheet_cell">班车6</div></a>
+	        </div>
+	        <div class="weui_actionsheet_action">
+	            <div class="weui_actionsheet_cell" id="actionsheet_cancel">取消</div>
+	        </div>
+	    </div>
+	</div>
+	<!--END actionSheet-->
+	<script src='map.js'></script>
+</body>
+</html>
